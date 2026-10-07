@@ -1,0 +1,407 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+<meta charset="utf-8">
+<title>Midfield Plan</title>
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#0F3D2E">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="Midfield">
+<meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+<link rel="manifest" href="manifest.webmanifest">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+<link rel="icon" href="favicon.png">
+<style>
+:root{
+  --green:#0F3D2E; --green-2:#135039; --chalk:#F2F5EF; --paper:#FFFFFF; --ink:#13241C; --mute:#5E7268;
+  --line:#D9E1D6; --bib:#FF6A2B; --study:#2F5BFF; --card:#FFD21F; --rest:#B9C5BC;
+  --num:"Avenir Next Condensed","Barlow Condensed","Roboto Condensed","Arial Narrow",system-ui,sans-serif;
+  --body:-apple-system,"SF Pro Text",system-ui,"Segoe UI",Roboto,sans-serif;
+}
+*{box-sizing:border-box;-webkit-tap-highlight-color:transparent}
+html,body{margin:0;background:var(--chalk);color:var(--ink);font:16px/1.4 var(--body)}
+body{min-height:100vh;padding-bottom:calc(84px + env(safe-area-inset-bottom))}
+button{font:inherit;color:inherit;border:0;background:none;padding:0;cursor:pointer}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--study);outline-offset:2px}
+
+/* header with mown stripes */
+.top{background:repeating-linear-gradient(90deg,var(--green) 0 34px,var(--green-2) 34px 68px);color:#fff;
+  padding:calc(env(safe-area-inset-top) + 18px) 20px 64px}
+.top .row{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}
+.app{font:800 15px/1 var(--num);letter-spacing:.04em;opacity:.8;margin:0 0 10px}
+h1{font:800 40px/0.95 var(--num);margin:0;letter-spacing:.005em}
+.phase{display:inline-block;margin-top:10px;padding:4px 10px;border-radius:99px;background:rgba(255,255,255,.14);font-size:13px}
+.nav{display:flex;gap:6px}
+.nav button{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.14);display:grid;place-items:center}
+.nav button[disabled]{opacity:.3}
+.nav svg{width:20px;height:20px;stroke:#fff;fill:none;stroke-width:2.2;stroke-linecap:round;stroke-linejoin:round}
+
+main{padding:0 16px;margin-top:-44px}
+.stack{display:grid;gap:12px}
+
+/* hero */
+.hero{position:relative;overflow:hidden;background:var(--paper);border-radius:22px;padding:20px 20px 18px;box-shadow:0 10px 30px rgba(15,61,46,.16)}
+.hero .pitch{position:absolute;right:-30px;top:-10px;width:190px;height:190px;color:var(--green);opacity:.09;pointer-events:none}
+.badge{display:inline-block;padding:3px 10px;border-radius:8px;font-size:13px;font-weight:700;color:#fff}
+.k-ball{background:var(--bib)} .k-fixed{background:var(--green)} .k-study{background:var(--study)}
+.k-exam{background:var(--card);color:var(--ink)} .k-rest{background:var(--rest);color:var(--ink)}
+.hero .time{font:800 76px/0.9 var(--num);margin:12px 0 4px;letter-spacing:-.01em}
+.hero .time small{font-size:26px;margin-left:4px;font-weight:700}
+.hero h2{font:700 21px/1.2 var(--body);margin:0 0 4px}
+.hero p{margin:0;color:var(--mute);max-width:30ch}
+.when{display:inline-block;margin-top:14px;font-weight:700;color:var(--green)}
+.hero .btn{margin-top:14px}
+.btn{display:inline-block;text-align:center;padding:12px 18px;border-radius:14px;background:var(--green);color:#fff;font-weight:700;text-decoration:none}
+.btn.ghost{background:transparent;color:var(--green);box-shadow:inset 0 0 0 2px var(--green)}
+
+/* progress */
+.week{display:grid;gap:8px;background:var(--paper);border-radius:16px;padding:12px 14px}
+.week .l{display:flex;align-items:baseline;gap:10px}
+.week b{font:800 26px/1 var(--num)}
+.bar{flex:1;height:8px;border-radius:99px;background:var(--line);overflow:hidden}
+.bar i{display:block;height:100%;background:var(--bib);border-radius:99px}
+
+/* timeline */
+.list{background:var(--paper);border-radius:18px;overflow:hidden}
+.item{display:grid;grid-template-columns:62px 6px 1fr 38px;gap:12px;align-items:stretch;padding:12px 12px 12px 14px;border-top:1px solid var(--line)}
+.item:first-child{border-top:0}
+.item .t{font:800 22px/1 var(--num);padding-top:2px;text-align:right}
+.item .t small{display:block;font:600 12px/1.2 var(--body);color:var(--mute);margin-top:4px}
+.item .bar6{border-radius:4px;background:var(--rest)}
+.item.ball .bar6{background:var(--bib)} .item.fixed .bar6{background:var(--green)}
+.item.study .bar6{background:var(--study)} .item.xcard .bar6{background:var(--card)}
+.item h3{font:700 16px/1.25 var(--body);margin:0}
+.item p{margin:2px 0 0;color:var(--mute);font-size:14px}
+.item.done h3{text-decoration:line-through;color:var(--mute)}
+.tick{width:34px;height:34px;border-radius:50%;box-shadow:inset 0 0 0 2px var(--line);display:grid;place-items:center;align-self:center}
+.tick svg{width:18px;height:18px;stroke:#fff;fill:none;stroke-width:3;stroke-linecap:round;stroke-linejoin:round;opacity:0}
+.item.done .tick{background:var(--green);box-shadow:none}
+.item.done .tick svg{opacity:1}
+.note{background:#E4ECDF;border-radius:14px;padding:12px 14px;color:var(--green);font-weight:600}
+.tip{background:var(--paper);border-radius:16px;padding:14px;display:flex;gap:10px;justify-content:space-between;align-items:flex-start}
+.tip p{margin:0;font-size:14px}
+.tip button{color:var(--mute);font-size:14px;font-weight:600}
+
+/* week */
+.day{display:grid;grid-template-columns:54px 1fr;gap:12px;background:var(--paper);border-radius:16px;padding:12px 14px;width:100%;text-align:left}
+.day.today{box-shadow:inset 0 0 0 2px var(--green)}
+.day .d{font:800 30px/0.95 var(--num);text-align:center}
+.day .d small{display:block;font:700 13px/1.3 var(--body);color:var(--mute)}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chip{font-size:13px;padding:3px 8px;border-radius:7px;background:var(--chalk);display:flex;gap:6px;align-items:center}
+.chip i{width:8px;height:8px;border-radius:50%;background:var(--rest)}
+.chip.ball i{background:var(--bib)} .chip.fixed i{background:var(--green)} .chip.study i{background:var(--study)} .chip.exam i{background:var(--card)}
+.sub{color:var(--mute);font-size:14px;margin:6px 2px 0}
+.wk{display:flex;justify-content:space-between;align-items:center}
+.wk h2{font:800 26px/1 var(--num);margin:0}
+
+/* exams */
+.xcard{display:grid;grid-template-columns:76px 1fr;background:var(--paper);border-radius:16px;overflow:hidden}
+.xcard .c{background:var(--card);display:grid;place-content:center;text-align:center;padding:12px 6px}
+.xcard .c b{font:800 38px/0.95 var(--num);display:block}
+.xcard .c span{font-size:13px;font-weight:700}
+.xcard.past .c{background:var(--line);color:var(--mute)}
+.xcard .b{padding:12px 14px}
+.xcard h3{margin:0;font:700 16px/1.25 var(--body)}
+.xcard p{margin:3px 0 0;color:var(--mute);font-size:14px}
+
+/* sessions + reminders */
+details{background:var(--paper);border-radius:16px;padding:14px 16px}
+summary{font:700 17px/1.3 var(--body);cursor:pointer;list-style:none;display:flex;justify-content:space-between;gap:8px}
+summary::-webkit-details-marker{display:none}
+summary small{font-weight:500;color:var(--mute);font-size:14px;display:block}
+details ul{margin:10px 0 0;padding-left:20px;color:var(--ink)}
+details li{margin:4px 0}
+.panel{background:var(--paper);border-radius:18px;padding:16px}
+.panel h2{font:800 24px/1 var(--num);margin:0 0 6px}
+.panel p{margin:6px 0;color:var(--mute);font-size:15px}
+.panel ol{margin:8px 0 12px;padding-left:20px;font-size:15px}
+.seg{display:grid;grid-template-columns:repeat(3,1fr);gap:6px;margin:10px 0 12px}
+.seg button{padding:10px 4px;border-radius:12px;box-shadow:inset 0 0 0 2px var(--line);font-weight:600;font-size:14px}
+.seg button.on{background:var(--green);color:#fff;box-shadow:none}
+.opt{display:flex;justify-content:space-between;align-items:center;padding:11px 0;border-top:1px solid var(--line);gap:12px}
+.opt:first-of-type{border-top:0}
+.sw{width:50px;height:30px;border-radius:99px;background:var(--line);position:relative;flex:none;transition:background .15s}
+.sw::after{content:"";position:absolute;left:3px;top:3px;width:24px;height:24px;border-radius:50%;background:#fff;transition:transform .15s}
+.sw.on{background:var(--green)} .sw.on::after{transform:translateX(20px)}
+.opt .l{font-weight:600}.opt .l small{display:block;font-weight:400;color:var(--mute)}
+.warn{color:#9A4B00;font-size:14px}
+
+/* toast */
+.toast{position:fixed;left:12px;right:12px;top:calc(env(safe-area-inset-top) + 10px);z-index:20;background:var(--ink);color:#fff;border-radius:16px;
+  padding:14px 16px;display:grid;gap:2px;box-shadow:0 12px 30px rgba(0,0,0,.3);animation:drop .25s ease-out}
+.toast b{font-size:17px}
+@keyframes drop{from{transform:translateY(-16px);opacity:0}to{transform:none;opacity:1}}
+@media (prefers-reduced-motion:reduce){.toast{animation:none}.sw,.sw::after{transition:none}}
+
+/* tab bar */
+.tabs{position:fixed;left:0;right:0;bottom:0;z-index:10;display:grid;grid-template-columns:repeat(5,1fr);background:rgba(255,255,255,.94);
+  backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-top:1px solid var(--line);padding:6px 6px calc(6px + env(safe-area-inset-bottom))}
+.tabs button{display:grid;justify-items:center;gap:3px;padding:6px 0;font-size:11.5px;font-weight:600;color:var(--mute);border-radius:10px}
+.tabs svg{width:24px;height:24px;stroke:currentColor;fill:none;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+.tabs button[aria-current=page]{color:var(--green)}
+.tabs button[aria-current=page] svg{stroke-width:2.6}
+.empty{background:var(--paper);border-radius:16px;padding:18px;color:var(--mute)}
+</style>
+</head>
+<body>
+<div id="app"></div>
+<div id="toast"></div>
+<nav class="tabs" id="tabs" aria-label="Main"></nav>
+
+<script>
+const PLAN = {"days":{"2026-10-08":{"ph":1,"n":"","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-08-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-08-1"},{"s":"15:45","e":"16:45","k":"ball","t":"Session C: game speed","x":"60 min, moderate. 1v1, carries, driven passes, set pieces. Finish by 5pm.","ses":"C","eu":false,"id":"2026-10-08-2"}]},"2026-10-09":{"ph":1,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-09-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-09-1"},{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-10-09-2"}]},"2026-10-10":{"ph":1,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-10-10-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-10-10-1"}]},"2026-10-11":{"ph":1,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-10-11-0"}]},"2026-10-12":{"ph":1,"n":"","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-12-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-12-1"},{"s":"15:45","e":"16:45","k":"ball","t":"Session A: technical touch","x":"60 min. Touch, passing accuracy, receive and turn, shooting.","ses":"A","eu":false,"id":"2026-10-12-2"}]},"2026-10-13":{"ph":1,"n":"Exam day. No training before the exam.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"English Paper 1 is at 9:50am. Ask the trainer for a light session, then eat and drink before the exam.","ses":null,"eu":false,"id":"2026-10-13-0"},{"s":"09:50","e":"11:50","k":"exam","t":"English Paper 1: Texts and Human Experiences","x":"De La Salle College, Revesby Heights. Check the finish time on NSW Students Online.","ses":null,"eu":true,"id":"2026-10-13-1"},{"s":"13:00","e":"14:30","k":"study","t":"Light review","x":"Go over today's paper, then rest.","ses":null,"eu":false,"id":"2026-10-13-2"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Exam tomorrow at 9:25am. Going is your call; if you go, be in bed by 10:15pm.","ses":null,"eu":false,"id":"2026-10-13-3"}]},"2026-10-14":{"ph":1,"n":"Exam day. No training before the exam.","ev":[{"s":"09:25","e":"11:25","k":"exam","t":"English Paper 2: Modules","x":"De La Salle College, Revesby Heights. Check the finish time on NSW Students Online.","ses":null,"eu":true,"id":"2026-10-14-0"},{"s":"13:00","e":"14:30","k":"study","t":"Light review","x":"Go over today's paper, then rest.","ses":null,"eu":false,"id":"2026-10-14-1"}]},"2026-10-15":{"ph":1,"n":"","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-15-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-15-1"},{"s":"15:45","e":"16:45","k":"ball","t":"Session C: game speed","x":"60 min, moderate. 1v1, carries, driven passes, set pieces. Finish by 5pm.","ses":"C","eu":false,"id":"2026-10-15-2"}]},"2026-10-16":{"ph":1,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-16-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-16-1"},{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-10-16-2"}]},"2026-10-17":{"ph":1,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-10-17-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-10-17-1"}]},"2026-10-18":{"ph":1,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-10-18-0"}]},"2026-10-19":{"ph":1,"n":"Exam day. No training before the exam.","ev":[{"s":"09:20","e":"11:20","k":"exam","t":"Mathematics Standard 2","x":"De La Salle College, Revesby Heights. Check the finish time on NSW Students Online.","ses":null,"eu":true,"id":"2026-10-19-0"},{"s":"13:00","e":"14:30","k":"study","t":"Light review","x":"Go over today's paper, then rest.","ses":null,"eu":false,"id":"2026-10-19-1"},{"s":"15:45","e":"16:05","k":"ball","t":"Touch work (20 min)","x":"Juggling and wall passes after the exam. Short and easy.","ses":"A","eu":false,"id":"2026-10-19-2"}]},"2026-10-20":{"ph":1,"n":"","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-10-20-0"},{"s":"09:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-20-1"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-20-2"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Futsal training.","ses":null,"eu":false,"id":"2026-10-20-3"}]},"2026-10-21":{"ph":1,"n":"","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-21-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-21-1"},{"s":"15:45","e":"16:25","k":"ball","t":"Session B: passing and scanning","x":"40 min, easy intensity. Pass and move, shoulder checks, long switches.","ses":"B","eu":false,"id":"2026-10-21-2"}]},"2026-10-22":{"ph":1,"n":"","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-22-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-22-1"},{"s":"15:45","e":"16:45","k":"ball","t":"Session C: game speed","x":"60 min, moderate. 1v1, carries, driven passes, set pieces. Finish by 5pm.","ses":"C","eu":false,"id":"2026-10-22-2"}]},"2026-10-23":{"ph":1,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-23-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-23-1"},{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-10-23-2"}]},"2026-10-24":{"ph":1,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-10-24-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-10-24-1"}]},"2026-10-25":{"ph":1,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-10-25-0"}]},"2026-10-26":{"ph":1,"n":"Exam day. No training before the exam.","ev":[{"s":"07:45","e":"08:05","k":"ball","t":"Touch work (20 min)","x":"Juggling and wall passes before study. Short and easy.","ses":"A","eu":false,"id":"2026-10-26-0"},{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-26-1"},{"s":"13:55","e":"15:55","k":"exam","t":"Construction","x":"De La Salle College, Revesby Heights. Check the finish time on NSW Students Online.","ses":null,"eu":true,"id":"2026-10-26-2"}]},"2026-10-27":{"ph":1,"n":"","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-10-27-0"},{"s":"09:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-27-1"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-27-2"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Exam tomorrow at 9:20am. Going is your call; if you go, be in bed by 10:15pm.","ses":null,"eu":false,"id":"2026-10-27-3"}]},"2026-10-28":{"ph":1,"n":"Exam day. No training before the exam.","ev":[{"s":"09:20","e":"11:20","k":"exam","t":"Health and Movement Science","x":"De La Salle College, Revesby Heights. Check the finish time on NSW Students Online.","ses":null,"eu":true,"id":"2026-10-28-0"},{"s":"13:00","e":"14:30","k":"study","t":"Light review","x":"Go over today's paper, then rest.","ses":null,"eu":false,"id":"2026-10-28-1"}]},"2026-10-29":{"ph":1,"n":"","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-29-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-29-1"},{"s":"15:45","e":"16:45","k":"ball","t":"Session C: game speed","x":"60 min, moderate. 1v1, carries, driven passes, set pieces. Finish by 5pm.","ses":"C","eu":false,"id":"2026-10-29-2"}]},"2026-10-30":{"ph":1,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-10-30-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-10-30-1"},{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-10-30-2"}]},"2026-10-31":{"ph":1,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-10-31-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-10-31-1"}]},"2026-11-01":{"ph":1,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-11-01-0"}]},"2026-11-02":{"ph":1,"n":"","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-11-02-0"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-11-02-1"},{"s":"15:45","e":"16:45","k":"ball","t":"Session A: technical touch","x":"60 min. Touch, passing accuracy, receive and turn, shooting.","ses":"A","eu":false,"id":"2026-11-02-2"}]},"2026-11-03":{"ph":1,"n":"","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-11-03-0"},{"s":"09:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-11-03-1"},{"s":"12:45","e":"15:30","k":"study","t":"Study: afternoon","x":"One more block, then past papers or flashcards.","ses":null,"eu":false,"id":"2026-11-03-2"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Exam tomorrow at 1:55pm. Going is your call; if you go, be in bed by 10:15pm.","ses":null,"eu":false,"id":"2026-11-03-3"}]},"2026-11-04":{"ph":1,"n":"Exam day. No training before the exam.","ev":[{"s":"08:30","e":"11:45","k":"study","t":"Study: morning blocks","x":"Two 90-minute blocks with a 15-minute break.","ses":null,"eu":false,"id":"2026-11-04-0"},{"s":"13:55","e":"15:55","k":"exam","t":"Industrial Technology: Multimedia","x":"De La Salle College, Revesby Heights. Check the finish time on NSW Students Online.","ses":null,"eu":true,"id":"2026-11-04-1"}]},"2026-11-05":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session C: game speed","x":"75 min, moderate. Includes 15 min of ball-carry intervals.","ses":"C","eu":false,"id":"2026-11-05-0"}]},"2026-11-06":{"ph":2,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-11-06-0"}]},"2026-11-07":{"ph":2,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-11-07-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-11-07-1"}]},"2026-11-08":{"ph":2,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-11-08-0"}]},"2026-11-09":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session A: technical touch","x":"75 min. Touch, passing accuracy, receive and turn, shooting.","ses":"A","eu":false,"id":"2026-11-09-0"}]},"2026-11-10":{"ph":2,"n":"","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-11-10-0"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Futsal training.","ses":null,"eu":false,"id":"2026-11-10-1"}]},"2026-11-11":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session B: passing and scanning","x":"75 min, easy intensity. Pass and move, shoulder checks, long switches.","ses":"B","eu":false,"id":"2026-11-11-0"}]},"2026-11-12":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session C: game speed","x":"75 min, moderate. Includes 15 min of ball-carry intervals.","ses":"C","eu":false,"id":"2026-11-12-0"}]},"2026-11-13":{"ph":2,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-11-13-0"}]},"2026-11-14":{"ph":2,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-11-14-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-11-14-1"}]},"2026-11-15":{"ph":2,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-11-15-0"}]},"2026-11-16":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session A: technical touch","x":"75 min. Touch, passing accuracy, receive and turn, shooting.","ses":"A","eu":false,"id":"2026-11-16-0"}]},"2026-11-17":{"ph":2,"n":"","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-11-17-0"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Futsal training.","ses":null,"eu":false,"id":"2026-11-17-1"}]},"2026-11-18":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session B: passing and scanning","x":"75 min, easy intensity. Pass and move, shoulder checks, long switches.","ses":"B","eu":false,"id":"2026-11-18-0"}]},"2026-11-19":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session C: game speed","x":"75 min, moderate. Includes 15 min of ball-carry intervals.","ses":"C","eu":false,"id":"2026-11-19-0"}]},"2026-11-20":{"ph":2,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-11-20-0"}]},"2026-11-21":{"ph":2,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-11-21-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-11-21-1"}]},"2026-11-22":{"ph":2,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-11-22-0"}]},"2026-11-23":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session A: technical touch","x":"75 min. Touch, passing accuracy, receive and turn, shooting.","ses":"A","eu":false,"id":"2026-11-23-0"}]},"2026-11-24":{"ph":2,"n":"","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-11-24-0"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Futsal training.","ses":null,"eu":false,"id":"2026-11-24-1"}]},"2026-11-25":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session B: passing and scanning","x":"75 min, easy intensity. Pass and move, shoulder checks, long switches.","ses":"B","eu":false,"id":"2026-11-25-0"}]},"2026-11-26":{"ph":2,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session C: game speed","x":"75 min, moderate. Includes 15 min of ball-carry intervals.","ses":"C","eu":false,"id":"2026-11-26-0"}]},"2026-11-27":{"ph":2,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-11-27-0"}]},"2026-11-28":{"ph":2,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-11-28-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-11-28-1"}]},"2026-11-29":{"ph":2,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-11-29-0"}]},"2026-11-30":{"ph":3,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session A: technical touch","x":"75 min. Touch, passing accuracy, receive and turn, shooting.","ses":"A","eu":false,"id":"2026-11-30-0"}]},"2026-12-01":{"ph":3,"n":"","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-12-01-0"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Futsal training.","ses":null,"eu":false,"id":"2026-12-01-1"}]},"2026-12-02":{"ph":3,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session B: passing and scanning","x":"75 min, easy intensity. Pass and move, shoulder checks, long switches.","ses":"B","eu":false,"id":"2026-12-02-0"}]},"2026-12-03":{"ph":3,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session C: match intensity","x":"75 min. Small-sided play on a full pitch.","ses":"C","eu":false,"id":"2026-12-03-0"}]},"2026-12-04":{"ph":3,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-12-04-0"}]},"2026-12-05":{"ph":3,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-12-05-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-12-05-1"}]},"2026-12-06":{"ph":3,"n":"Full recovery after the Saturday load.","ev":[{"s":null,"e":null,"k":"rest","t":"Rest day","x":"Full rest. A short walk and some stretching is fine.","ses":null,"eu":false,"id":"2026-12-06-0"}]},"2026-12-07":{"ph":3,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session A: technical touch","x":"75 min. Touch, passing accuracy, receive and turn, shooting.","ses":"A","eu":false,"id":"2026-12-07-0"}]},"2026-12-08":{"ph":3,"n":"","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-12-08-0"},{"s":"20:00","e":"21:00","k":"fixed","t":"Futsal training","x":"Futsal training.","ses":null,"eu":false,"id":"2026-12-08-1"}]},"2026-12-09":{"ph":3,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session B: passing and scanning","x":"75 min, easy intensity. Pass and move, shoulder checks, long switches. If a trial is coming, cut this by a third in the last 3 days.","ses":"B","eu":false,"id":"2026-12-09-0"}]},"2026-12-10":{"ph":3,"n":"","ev":[{"s":"15:45","e":"17:00","k":"ball","t":"Session C: match intensity","x":"75 min. Small-sided play on a full pitch. If a trial is coming, cut this by a third in the last 3 days.","ses":"C","eu":false,"id":"2026-12-10-0"}]},"2026-12-11":{"ph":3,"n":"In bed by 9:30pm. Saturday fitness starts at 6am.","ev":[{"s":"16:00","e":"17:30","k":"fixed","t":"S&C","x":"Strength and conditioning with his S&C coach.","ses":null,"eu":false,"id":"2026-12-11-0"}]},"2026-12-12":{"ph":3,"n":"Match day. Light revision only.","ev":[{"s":"06:00","e":"07:00","k":"fixed","t":"Saturday fitness","x":"Sprints or a 5 km run, depending on the week. Check this week's plan.","ses":null,"eu":false,"id":"2026-12-12-0"},{"s":null,"e":null,"k":"fixed","t":"NPL futsal match","x":"Kick-off time depends on the draw.","ses":null,"eu":false,"id":"2026-12-12-1"}]}},"exams":[{"d":"2026-10-13","s":"09:50","t":"English Paper 1: Texts and Human Experiences"},{"d":"2026-10-14","s":"09:25","t":"English Paper 2: Modules"},{"d":"2026-10-19","s":"09:20","t":"Mathematics Standard 2"},{"d":"2026-10-26","s":"13:55","t":"Construction"},{"d":"2026-10-28","s":"09:20","t":"Health and Movement Science"},{"d":"2026-11-04","s":"13:55","t":"Industrial Technology: Multimedia"}],"venue":"De La Salle College, Revesby Heights","phases":{"1":"Exam block","2":"Build","3":"Preseason ready"},"first":"2026-10-08","last":"2026-12-12"};
+</script>
+<script>
+(() => {
+"use strict";
+const KEY = "midfield-v1";
+const DEF = {tab:"today", sel:null, done:{}, fired:{}, tipHidden:false,
+  prefs:{inapp:true, lead:15, ics:15, cats:{ball:true,fixed:true,study:true,exam:true}}};
+const WD = ["Sunday","Monday","Tuesday","Wednesday","Thursday","Friday","Saturday"];
+const MO = ["January","February","March","April","May","June","July","August","September","October","November","December"];
+const KIND = {ball:"Ball work", fixed:"Team training", study:"Study", exam:"Exam", rest:"Rest"};
+const DAYS = Object.keys(PLAN.days).sort();
+
+function load(){
+  try{
+    const s = JSON.parse(localStorage.getItem(KEY)||"{}");
+    return Object.assign({}, DEF, s, {prefs:Object.assign({}, DEF.prefs, s.prefs||{}, {cats:Object.assign({}, DEF.prefs.cats, (s.prefs||{}).cats||{})})});
+  }catch(e){ return JSON.parse(JSON.stringify(DEF)); }
+}
+let S = load();
+function save(){ try{ localStorage.setItem(KEY, JSON.stringify(S)); }catch(e){} }
+
+const override = new URLSearchParams(location.search).get("now");
+const now = () => override ? new Date(override) : new Date();
+const pad = n => String(n).padStart(2,"0");
+const iso = d => `${d.getFullYear()}-${pad(d.getMonth()+1)}-${pad(d.getDate())}`;
+const fromIso = s => { const [y,m,d] = s.split("-").map(Number); return new Date(y,m-1,d); };
+const addDays = (d,n) => { const x = new Date(d); x.setDate(x.getDate()+n); return x; };
+const startAt = (day,s) => new Date(`${day}T${s}:00`);
+function clamp(s){ return s < DAYS[0] ? DAYS[0] : s > DAYS[DAYS.length-1] ? DAYS[DAYS.length-1] : s; }
+function fmt(s){ let [h,m] = s.split(":").map(Number); const ap = h>=12?"pm":"am"; h = h%12||12; return {big: m? `${h}:${pad(m)}` : `${h}`, ap, text: m? `${h}:${pad(m)}${ap}` : `${h}${ap}`}; }
+function longDate(s){ const d = fromIso(s); return `${WD[d.getDay()]} ${d.getDate()} ${MO[d.getMonth()]}`; }
+function until(ms){
+  const m = Math.round(ms/60000);
+  if(m < 1) return "starting now";
+  if(m < 60) return `in ${m} min`;
+  const h = Math.floor(m/60);
+  if(h < 24) return `in ${h} h${m%60 ? " "+(m%60)+" min" : ""}`;
+  const d = Math.round(ms/86400000);
+  return d===1 ? "tomorrow" : `in ${d} days`;
+}
+if(!S.sel) S.sel = clamp(iso(now()));
+
+const ICON = {
+  today:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 2"/></svg>',
+  week:'<svg viewBox="0 0 24 24"><rect x="3.5" y="5" width="17" height="15" rx="3"/><path d="M3.5 10h17M8 3v4M16 3v4"/></svg>',
+  exams:'<svg viewBox="0 0 24 24"><rect x="6" y="3.5" width="12" height="17" rx="2.5"/><path d="M10 9h4"/></svg>',
+  sessions:'<svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M12 3v18M3 12h18"/><circle cx="12" cy="12" r="3.5"/></svg>',
+  alerts:'<svg viewBox="0 0 24 24"><path d="M6 17V11a6 6 0 0112 0v6l1.5 2h-15L6 17z"/><path d="M10 21h4"/></svg>',
+  prev:'<svg viewBox="0 0 24 24"><path d="M15 5l-7 7 7 7"/></svg>',
+  next:'<svg viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>',
+  check:'<svg viewBox="0 0 24 24"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>',
+};
+const TABS = [["today","Today","today"],["week","Week","week"],["exams","Exams","exams"],["sessions","Sessions","sessions"],["alerts","Reminders","alerts"]];
+
+const PITCH = '<svg class="pitch" viewBox="0 0 200 200" fill="none" stroke="currentColor" stroke-width="5"><circle cx="110" cy="100" r="62"/><path d="M110 0v200"/><circle cx="110" cy="100" r="6" fill="currentColor"/></svg>';
+
+function nextEvent(){
+  const n = now();
+  for(const d of DAYS){
+    if(d < iso(n)) continue;
+    for(const e of PLAN.days[d].ev){
+      if(!e.s || e.k === "rest") continue;
+      const st = startAt(d,e.s);
+      if(st >= n && !S.done[e.id]) return {d, e, st};
+    }
+  }
+  return null;
+}
+
+function weekDays(sel){
+  const d = fromIso(sel); const mon = addDays(d, -((d.getDay()+6)%7));
+  return Array.from({length:7}, (_,i) => iso(addDays(mon,i)));
+}
+
+function header(title, sub, withNav){
+  const idx = DAYS.indexOf(S.sel);
+  return `<header class="top"><p class="app">Midfield Plan</p><div class="row"><div><h1>${title}</h1>${sub||""}</div>${withNav?
+    `<div class="nav"><button data-act="prev" aria-label="Previous day" ${idx<=0?"disabled":""}>${ICON.prev}</button><button data-act="next" aria-label="Next day" ${idx>=DAYS.length-1?"disabled":""}>${ICON.next}</button></div>`:""}</div></header>`;
+}
+
+function viewToday(){
+  const day = PLAN.days[S.sel];
+  const isToday = S.sel === iso(now());
+  const ph = `<span class="phase">${PLAN.phases[day.ph]} phase</span>`;
+  let html = header(longDate(S.sel).replace(" ", "<br>"), ph, true) + `<main><div class="stack">`;
+
+  if(isToday){
+    const nx = nextEvent();
+    if(nx){
+      const f = fmt(nx.e.s), same = nx.d === S.sel;
+      html += `<section class="hero">${PITCH}<span class="badge k-${nx.e.k}">${KIND[nx.e.k]}</span>
+        <div class="time">${f.big}<small>${f.ap}</small></div><h2>${nx.e.t}</h2><p>${nx.e.x}</p>
+        <span class="when">${same? "" : longDate(nx.d)+", "}${until(nx.st - now())}</span>
+        ${nx.e.k!=="exam"?`<br><button class="btn ghost" data-act="done" data-id="${nx.e.id}">Mark done</button>`:""}</section>`;
+    } else {
+      html += `<section class="hero">${PITCH}<h2>Nothing left to do</h2><p>The plan runs to ${longDate(PLAN.last)}.</p></section>`;
+    }
+  }
+
+  // weekly progress
+  const wk = weekDays(S.sel).filter(d => PLAN.days[d]);
+  const sess = wk.flatMap(d => PLAN.days[d].ev.filter(e => e.s && (e.k==="ball"||e.k==="fixed")));
+  const dn = sess.filter(e => S.done[e.id]).length;
+  if(sess.length) html += `<div class="week"><div class="l"><b>${dn} of ${sess.length}</b><span class="sub" style="margin:0">training sessions done this week</span></div><div class="bar"><i style="width:${Math.round(dn/sess.length*100)}%"></i></div></div>`;
+
+  if(day.n) html += `<div class="note">${day.n}</div>`;
+
+  html += `<div class="list">` + day.ev.map(e => {
+    const f = e.s ? fmt(e.s) : null;
+    const canTick = e.s && e.k !== "exam" && e.k !== "rest";
+    return `<div class="item ${e.k} ${S.done[e.id]?"done":""}">
+      <div class="t">${f? f.big : ""}${f? `<small>${f.ap}</small>` : ""}</div><div class="bar6"></div>
+      <div><h3>${e.t}</h3><p>${e.x}</p></div>
+      ${canTick? `<button class="tick" data-act="done" data-id="${e.id}" aria-label="Mark ${e.t} done" aria-pressed="${!!S.done[e.id]}">${ICON.check}</button>` : "<span></span>"}</div>`;
+  }).join("") + `</div>`;
+
+  const standalone = window.navigator.standalone || matchMedia("(display-mode: standalone)").matches;
+  if(!standalone && !S.tipHidden && /iPhone|iPad/.test(navigator.userAgent))
+    html += `<div class="tip"><p>To install: tap the Share button in Safari, then Add to Home Screen.</p><button data-act="hidetip">Dismiss</button></div>`;
+  if(!isToday) html += `<button class="btn ghost" data-act="today">Back to today</button>`;
+  return html + `</div></main>`;
+}
+
+function viewWeek(){
+  const days = weekDays(S.sel);
+  const first = fromIso(days[0]), last = fromIso(days[6]);
+  let html = header("Week", `<span class="phase">${first.getDate()} ${MO[first.getMonth()].slice(0,3)} to ${last.getDate()} ${MO[last.getMonth()].slice(0,3)}</span>`, true) + `<main><div class="stack">`;
+  html += days.map(d => {
+    const day = PLAN.days[d]; if(!day) return "";
+    const dd = fromIso(d);
+    const chips = day.ev.map(e => `<span class="chip ${e.k}"><i></i>${e.s? fmt(e.s).text+" " : ""}${e.t}</span>`).join("");
+    return `<button class="day ${d===iso(now())?"today":""}" data-act="goto" data-d="${d}"><div class="d">${dd.getDate()}<small>${WD[dd.getDay()].slice(0,3)}</small></div><div class="chips">${chips || '<span class="sub">Free day</span>'}</div></button>`;
+  }).join("");
+  return html + `<p class="sub">Tap a day to see the detail.</p></div></main>`;
+}
+
+function viewExams(){
+  const n = now();
+  let html = header("Exams", `<span class="phase">${PLAN.exams.length} papers, last on ${longDate(PLAN.exams[PLAN.exams.length-1].d)}</span>`, false) + `<main><div class="stack">`;
+  let flagged = false;
+  html += PLAN.exams.map(x => {
+    const st = startAt(x.d, x.s); const past = st < n;
+    const days = Math.ceil((fromIso(x.d) - fromIso(iso(n)))/86400000);
+    const big = past ? "Done" : days===0 ? "Today" : days;
+    const small = past || days===0 ? "" : days===1 ? "day" : "days";
+    return `<div class="xcard ${past?"past":""}"><div class="c"><b${past?' style="font-size:24px"':""}>${big}</b><span>${small}</span></div>
+      <div class="b"><h3>${x.t}</h3><p>${longDate(x.d)}, ${fmt(x.s).text}</p><p>${PLAN.venue}</p></div></div>`;
+  }).join("");
+  return html + `<p class="sub">Times come from the NSW Students Online timetable. Check them there before each exam.</p></div></main>`;
+}
+
+function viewSessions(){
+  const S_ = [
+    ["Session A: technical touch","Mondays, 60 min (75 min from 5 Nov)",
+     ["10 min dynamic warm-up with a ball","8 min juggling, weaker foot only for the last 2","15 min wall or rebounder passing at 5, 15 and 25 m, both feet","15 min receive-and-turn through cones","10 min shooting from the edge of the box: 5 each foot, then 5 first-time","2 min easy cool-down"]],
+    ["Session B: passing and scanning","Wednesdays, 40 min, easy (75 min from 5 Nov)",
+     ["8 min warm-up","12 min pass and move with a partner or wall, shoulder check before every first touch","10 min switches of 25 to 40 m to a target, alternating feet","10 min stretching and mobility"]],
+    ["Session C: game speed","Thursdays, 60 min, moderate (75 min from 5 Nov)",
+     ["10 min dynamic warm-up","15 min 1v1 and 2v1 with a partner, or against mini-goals","10 min ball carries over 30 to 40 m at pace, 6 reps, walk back","15 min driven passes, crosses and set-piece delivery","10 min cool-down and stretching"]],
+  ];
+  let html = header("Sessions", `<span class="phase">What to do in each one</span>`, false) + `<main><div class="stack">`;
+  html += S_.map(([t,sub,steps]) => `<details><summary><span>${t}<small>${sub}</small></span></summary><ul>${steps.map(s=>`<li>${s}</li>`).join("")}</ul></details>`).join("");
+  html += `<div class="panel"><h2>Cut back if needed</h2><p>Drop Session B first, then shorten Session C to 30 minutes. Keep Session A. Stop and see a physio or GP for sharp pain, or knee or heel pain that builds up.</p><p>Sunday stays a full rest day.</p></div>`;
+  return html + `</div></main>`;
+}
+
+function viewAlerts(){
+  const p = S.prefs;
+  const fn = {0:"at-start",15:"15min",60:"1hr"}[p.ics];
+  const seg = (name, val, opts) => `<div class="seg">${opts.map(([v,l]) => `<button class="${val===v?"on":""}" data-act="${name}" data-v="${v}">${l}</button>`).join("")}</div>`;
+  const sw = (cat,label,sub) => `<div class="opt"><span class="l">${label}<small>${sub}</small></span><button class="sw ${p.cats[cat]?"on":""}" role="switch" aria-checked="${!!p.cats[cat]}" aria-label="${label}" data-act="cat" data-v="${cat}"></button></div>`;
+  const perm = ("Notification" in window) ? Notification.permission : "unsupported";
+  let html = header("Reminders", `<span class="phase">Never miss a session</span>`, false) + `<main><div class="stack">`;
+  html += `<div class="panel"><h2>Phone calendar alerts</h2>
+    <p>These ring even when the app is closed. They cover every session, study block and exam to 12 December.</p>
+    <p><b>Alert me</b></p>${seg("ics",p.ics,[[0,"At start"],[15,"15 min before"],[60,"1 hour before"]])}
+    <ol><li>Tap Add to calendar. Safari opens the events.</li><li>Tap Add All at the bottom.</li><li>Choose a new calendar called Midfield Plan.</li></ol>
+    <a class="btn" href="midfield-plan-${fn}.ics">Add to calendar</a>
+    <p class="warn">Add it once only. To change the alert time, delete the Midfield Plan calendar first, then add again. If nothing happens, open this page in Safari.</p></div>`;
+  html += `<div class="panel"><h2>Reminders in the app</h2><p>These show a banner while the app is open.</p>
+    <div class="opt"><span class="l">Banner reminders</span><button class="sw ${p.inapp?"on":""}" role="switch" aria-checked="${!!p.inapp}" aria-label="Banner reminders" data-act="inapp"></button></div>
+    <p style="margin-top:10px"><b>Remind me</b></p>${seg("lead",p.lead,[[0,"At start"],[15,"15 min before"],[60,"1 hour before"]])}
+    ${sw("ball","Ball work","Sessions A, B and C")}${sw("fixed","Team training","S&C, futsal and Saturday fitness")}${sw("study","Study","Study blocks")}${sw("exam","Exams","Papers at De La Salle")}
+    ${perm==="default"?`<button class="btn ghost" style="margin-top:12px" data-act="perm">Also show phone notifications</button>`:perm==="granted"?`<p>Phone notifications are on while the app is open.</p>`:perm==="denied"?`<p class="warn">Notifications are blocked. Turn them on in Settings, Notifications, Midfield.</p>`:""}
+  </div>`;
+  return html + `</div></main>`;
+}
+
+function render(){
+  const v = {today:viewToday, week:viewWeek, exams:viewExams, sessions:viewSessions, alerts:viewAlerts}[S.tab]();
+  document.getElementById("app").innerHTML = v;
+  document.getElementById("tabs").innerHTML = TABS.map(([id,l,ic]) => `<button data-act="tab" data-v="${id}" ${S.tab===id?'aria-current="page"':""}>${ICON[ic]}<span>${l}</span></button>`).join("");
+}
+
+function toast(title, body){
+  const t = document.getElementById("toast");
+  t.innerHTML = `<div class="toast" role="status"><b>${title}</b><span>${body}</span></div>`;
+  clearTimeout(toast.h); toast.h = setTimeout(() => t.innerHTML = "", 12000);
+  t.onclick = () => t.innerHTML = "";
+}
+
+function notify(e, st, day){
+  const body = `${fmt(e.s).text}. ${e.x}`;
+  toast(e.t, `${until(st - now())}. ${e.x}`);
+  if("Notification" in window && Notification.permission === "granted" && navigator.serviceWorker){
+    navigator.serviceWorker.ready.then(r => r.showNotification(e.t, {body, tag:e.id, icon:"icon-192.png"})).catch(()=>{});
+  }
+}
+
+function tick(){
+  const p = S.prefs; if(!p.inapp) return;
+  const n = now();
+  for(const d of [iso(n), iso(addDays(n,1))]){
+    const day = PLAN.days[d]; if(!day) continue;
+    for(const e of day.ev){
+      if(!e.s || !p.cats[e.k] || S.done[e.id] || S.fired[e.id]) continue;
+      const st = startAt(d, e.s);
+      if(n >= new Date(st - p.lead*60000) && n < new Date(+st + 5*60000)){
+        S.fired[e.id] = 1; save(); notify(e, st, d);
+      }
+    }
+  }
+  if(S.tab === "today" && S.sel === iso(n)) render();
+}
+
+document.addEventListener("click", ev => {
+  const t = ev.target.closest("[data-act]"); if(!t) return;
+  const a = t.dataset.act, v = t.dataset.v, p = S.prefs;
+  const idx = DAYS.indexOf(S.sel);
+  if(a==="tab") S.tab = v;
+  else if(a==="prev"){ if(S.tab==="week") S.sel = clamp(iso(addDays(fromIso(S.sel),-7))); else if(idx>0) S.sel = DAYS[idx-1]; }
+  else if(a==="next"){ if(S.tab==="week") S.sel = clamp(iso(addDays(fromIso(S.sel),7))); else if(idx<DAYS.length-1) S.sel = DAYS[idx+1]; }
+  else if(a==="today") S.sel = clamp(iso(now()));
+  else if(a==="goto"){ S.sel = t.dataset.d; S.tab = "today"; }
+  else if(a==="done"){ const id = t.dataset.id; if(S.done[id]) delete S.done[id]; else S.done[id] = 1; }
+  else if(a==="hidetip") S.tipHidden = true;
+  else if(a==="ics") p.ics = Number(v);
+  else if(a==="lead") p.lead = Number(v);
+  else if(a==="inapp") p.inapp = !p.inapp;
+  else if(a==="cat") p.cats[v] = !p.cats[v];
+  else if(a==="perm"){ Notification.requestPermission().then(render); return; }
+  save(); render(); window.scrollTo(0,0);
+});
+
+render();
+tick(); setInterval(tick, 20000);
+document.addEventListener("visibilitychange", () => { if(!document.hidden){ S.sel = S.sel; tick(); render(); } });
+if("serviceWorker" in navigator && location.protocol.startsWith("http")) navigator.serviceWorker.register("sw.js").catch(()=>{});
+})();
+</script>
+</body>
+</html>

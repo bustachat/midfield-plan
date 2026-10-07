@@ -1,0 +1,1439 @@
+BEGIN:VCALENDAR
+VERSION:2.0
+PRODID:-//Midfield Plan//EN
+CALSCALE:GREGORIAN
+METHOD:PUBLISH
+X-WR-CALNAME:Midfield Plan
+X-WR-TIMEZONE:Australia/Sydney
+BEGIN:VTIMEZONE
+TZID:Australia/Sydney
+BEGIN:STANDARD
+DTSTART:19700405T030000
+RRULE:FREQ=YEARLY;BYMONTH=4;BYDAY=1SU
+TZNAME:AEST
+TZOFFSETFROM:+1100
+TZOFFSETTO:+1000
+END:STANDARD
+BEGIN:DAYLIGHT
+DTSTART:19701004T020000
+RRULE:FREQ=YEARLY;BYMONTH=10;BYDAY=1SU
+TZNAME:AEDT
+TZOFFSETFROM:+1000
+TZOFFSETTO:+1100
+END:DAYLIGHT
+END:VTIMEZONE
+BEGIN:VEVENT
+UID:2026-10-08-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261008T083000
+DTEND;TZID=Australia/Sydney:20261008T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-08-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261008T124500
+DTEND;TZID=Australia/Sydney:20261008T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-08-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261008T154500
+DTEND;TZID=Australia/Sydney:20261008T164500
+SUMMARY:Train: Session C: game speed
+DESCRIPTION:60 min\, moderate. 1v1\, carries\, driven passes\, set pieces.
+  Finish by 5pm.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: game speed starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261009T083000
+DTEND;TZID=Australia/Sydney:20261009T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261009T124500
+DTEND;TZID=Australia/Sydney:20261009T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-09-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261009T160000
+DTEND;TZID=Australia/Sydney:20261009T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-10-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261010T060000
+DTEND;TZID=Australia/Sydney:20261010T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-12-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261012T083000
+DTEND;TZID=Australia/Sydney:20261012T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-12-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261012T124500
+DTEND;TZID=Australia/Sydney:20261012T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-12-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261012T154500
+DTEND;TZID=Australia/Sydney:20261012T164500
+SUMMARY:Train: Session A: technical touch
+DESCRIPTION:60 min. Touch\, passing accuracy\, receive and turn\, shooting
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session A: technical touch starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-13-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261013T060000
+DTEND;TZID=Australia/Sydney:20261013T070000
+SUMMARY:Train: S&C
+DESCRIPTION:English Paper 1 is at 9:50am. Ask the trainer for a light sess
+ ion\, then eat and drink before the exam.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-13-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261013T095000
+DTEND;TZID=Australia/Sydney:20261013T115000
+SUMMARY:Exam: English Paper 1: Texts and Human Experiences
+DESCRIPTION:De La Salle College\, Revesby Heights. Check the finish time o
+ n NSW Students Online.
+LOCATION:De La Salle College\, Revesby Heights
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam: English Paper 1: Texts and Human Experiences starts soon
+TRIGGER:-PT60M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam tomorrow: English Paper 1: Texts and Human Experiences
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-13-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261013T130000
+DTEND;TZID=Australia/Sydney:20261013T143000
+SUMMARY:Study: Light review
+DESCRIPTION:Go over today's paper\, then rest.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Light review starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-13-3@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261013T200000
+DTEND;TZID=Australia/Sydney:20261013T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Exam tomorrow at 9:25am. Going is your call\; if you go\, be i
+ n bed by 10:15pm.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-14-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261014T092500
+DTEND;TZID=Australia/Sydney:20261014T112500
+SUMMARY:Exam: English Paper 2: Modules
+DESCRIPTION:De La Salle College\, Revesby Heights. Check the finish time o
+ n NSW Students Online.
+LOCATION:De La Salle College\, Revesby Heights
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam: English Paper 2: Modules starts soon
+TRIGGER:-PT60M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam tomorrow: English Paper 2: Modules
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-14-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261014T130000
+DTEND;TZID=Australia/Sydney:20261014T143000
+SUMMARY:Study: Light review
+DESCRIPTION:Go over today's paper\, then rest.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Light review starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-15-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261015T083000
+DTEND;TZID=Australia/Sydney:20261015T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-15-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261015T124500
+DTEND;TZID=Australia/Sydney:20261015T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-15-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261015T154500
+DTEND;TZID=Australia/Sydney:20261015T164500
+SUMMARY:Train: Session C: game speed
+DESCRIPTION:60 min\, moderate. 1v1\, carries\, driven passes\, set pieces.
+  Finish by 5pm.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: game speed starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-16-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261016T083000
+DTEND;TZID=Australia/Sydney:20261016T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-16-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261016T124500
+DTEND;TZID=Australia/Sydney:20261016T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-16-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261016T160000
+DTEND;TZID=Australia/Sydney:20261016T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-17-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261017T060000
+DTEND;TZID=Australia/Sydney:20261017T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261019T092000
+DTEND;TZID=Australia/Sydney:20261019T112000
+SUMMARY:Exam: Mathematics Standard 2
+DESCRIPTION:De La Salle College\, Revesby Heights. Check the finish time o
+ n NSW Students Online.
+LOCATION:De La Salle College\, Revesby Heights
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam: Mathematics Standard 2 starts soon
+TRIGGER:-PT60M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam tomorrow: Mathematics Standard 2
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261019T130000
+DTEND;TZID=Australia/Sydney:20261019T143000
+SUMMARY:Study: Light review
+DESCRIPTION:Go over today's paper\, then rest.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Light review starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-19-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261019T154500
+DTEND;TZID=Australia/Sydney:20261019T160500
+SUMMARY:Train: Touch work (20 min)
+DESCRIPTION:Juggling and wall passes after the exam. Short and easy.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Touch work (20 min) starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261020T060000
+DTEND;TZID=Australia/Sydney:20261020T070000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261020T093000
+DTEND;TZID=Australia/Sydney:20261020T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261020T124500
+DTEND;TZID=Australia/Sydney:20261020T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-20-3@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261020T200000
+DTEND;TZID=Australia/Sydney:20261020T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Futsal training.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-21-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261021T083000
+DTEND;TZID=Australia/Sydney:20261021T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-21-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261021T124500
+DTEND;TZID=Australia/Sydney:20261021T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-21-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261021T154500
+DTEND;TZID=Australia/Sydney:20261021T162500
+SUMMARY:Train: Session B: passing and scanning
+DESCRIPTION:40 min\, easy intensity. Pass and move\, shoulder checks\, lon
+ g switches.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session B: passing and scanning starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261022T083000
+DTEND;TZID=Australia/Sydney:20261022T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261022T124500
+DTEND;TZID=Australia/Sydney:20261022T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-22-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261022T154500
+DTEND;TZID=Australia/Sydney:20261022T164500
+SUMMARY:Train: Session C: game speed
+DESCRIPTION:60 min\, moderate. 1v1\, carries\, driven passes\, set pieces.
+  Finish by 5pm.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: game speed starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261023T083000
+DTEND;TZID=Australia/Sydney:20261023T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261023T124500
+DTEND;TZID=Australia/Sydney:20261023T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-23-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261023T160000
+DTEND;TZID=Australia/Sydney:20261023T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-24-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261024T060000
+DTEND;TZID=Australia/Sydney:20261024T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261026T074500
+DTEND;TZID=Australia/Sydney:20261026T080500
+SUMMARY:Train: Touch work (20 min)
+DESCRIPTION:Juggling and wall passes before study. Short and easy.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Touch work (20 min) starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261026T083000
+DTEND;TZID=Australia/Sydney:20261026T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-26-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261026T135500
+DTEND;TZID=Australia/Sydney:20261026T155500
+SUMMARY:Exam: Construction
+DESCRIPTION:De La Salle College\, Revesby Heights. Check the finish time o
+ n NSW Students Online.
+LOCATION:De La Salle College\, Revesby Heights
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam: Construction starts soon
+TRIGGER:-PT60M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam tomorrow: Construction
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261027T060000
+DTEND;TZID=Australia/Sydney:20261027T070000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261027T093000
+DTEND;TZID=Australia/Sydney:20261027T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261027T124500
+DTEND;TZID=Australia/Sydney:20261027T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-27-3@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261027T200000
+DTEND;TZID=Australia/Sydney:20261027T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Exam tomorrow at 9:20am. Going is your call\; if you go\, be i
+ n bed by 10:15pm.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261028T092000
+DTEND;TZID=Australia/Sydney:20261028T112000
+SUMMARY:Exam: Health and Movement Science
+DESCRIPTION:De La Salle College\, Revesby Heights. Check the finish time o
+ n NSW Students Online.
+LOCATION:De La Salle College\, Revesby Heights
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam: Health and Movement Science starts soon
+TRIGGER:-PT60M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam tomorrow: Health and Movement Science
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-28-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261028T130000
+DTEND;TZID=Australia/Sydney:20261028T143000
+SUMMARY:Study: Light review
+DESCRIPTION:Go over today's paper\, then rest.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Light review starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261029T083000
+DTEND;TZID=Australia/Sydney:20261029T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261029T124500
+DTEND;TZID=Australia/Sydney:20261029T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-29-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261029T154500
+DTEND;TZID=Australia/Sydney:20261029T164500
+SUMMARY:Train: Session C: game speed
+DESCRIPTION:60 min\, moderate. 1v1\, carries\, driven passes\, set pieces.
+  Finish by 5pm.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: game speed starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261030T083000
+DTEND;TZID=Australia/Sydney:20261030T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261030T124500
+DTEND;TZID=Australia/Sydney:20261030T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-30-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261030T160000
+DTEND;TZID=Australia/Sydney:20261030T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-10-31-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261031T060000
+DTEND;TZID=Australia/Sydney:20261031T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261102T083000
+DTEND;TZID=Australia/Sydney:20261102T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261102T124500
+DTEND;TZID=Australia/Sydney:20261102T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-02-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261102T154500
+DTEND;TZID=Australia/Sydney:20261102T164500
+SUMMARY:Train: Session A: technical touch
+DESCRIPTION:60 min. Touch\, passing accuracy\, receive and turn\, shooting
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session A: technical touch starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261103T060000
+DTEND;TZID=Australia/Sydney:20261103T070000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261103T093000
+DTEND;TZID=Australia/Sydney:20261103T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-2@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261103T124500
+DTEND;TZID=Australia/Sydney:20261103T153000
+SUMMARY:Study: Study: afternoon
+DESCRIPTION:One more block\, then past papers or flashcards.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: afternoon starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-03-3@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261103T200000
+DTEND;TZID=Australia/Sydney:20261103T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Exam tomorrow at 1:55pm. Going is your call\; if you go\, be i
+ n bed by 10:15pm.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-04-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261104T083000
+DTEND;TZID=Australia/Sydney:20261104T114500
+SUMMARY:Study: Study: morning blocks
+DESCRIPTION:Two 90-minute blocks with a 15-minute break.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Study: Study: morning blocks starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-04-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261104T135500
+DTEND;TZID=Australia/Sydney:20261104T155500
+SUMMARY:Exam: Industrial Technology: Multimedia
+DESCRIPTION:De La Salle College\, Revesby Heights. Check the finish time o
+ n NSW Students Online.
+LOCATION:De La Salle College\, Revesby Heights
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam: Industrial Technology: Multimedia starts soon
+TRIGGER:-PT60M
+END:VALARM
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Exam tomorrow: Industrial Technology: Multimedia
+TRIGGER:-P1D
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-05-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261105T154500
+DTEND;TZID=Australia/Sydney:20261105T170000
+SUMMARY:Train: Session C: game speed
+DESCRIPTION:75 min\, moderate. Includes 15 min of ball-carry intervals.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: game speed starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-06-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261106T160000
+DTEND;TZID=Australia/Sydney:20261106T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-07-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261107T060000
+DTEND;TZID=Australia/Sydney:20261107T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-09-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261109T154500
+DTEND;TZID=Australia/Sydney:20261109T170000
+SUMMARY:Train: Session A: technical touch
+DESCRIPTION:75 min. Touch\, passing accuracy\, receive and turn\, shooting
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session A: technical touch starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-10-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261110T060000
+DTEND;TZID=Australia/Sydney:20261110T070000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-10-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261110T200000
+DTEND;TZID=Australia/Sydney:20261110T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Futsal training.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-11-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261111T154500
+DTEND;TZID=Australia/Sydney:20261111T170000
+SUMMARY:Train: Session B: passing and scanning
+DESCRIPTION:75 min\, easy intensity. Pass and move\, shoulder checks\, lon
+ g switches.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session B: passing and scanning starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-12-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261112T154500
+DTEND;TZID=Australia/Sydney:20261112T170000
+SUMMARY:Train: Session C: game speed
+DESCRIPTION:75 min\, moderate. Includes 15 min of ball-carry intervals.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: game speed starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-13-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261113T160000
+DTEND;TZID=Australia/Sydney:20261113T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-14-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261114T060000
+DTEND;TZID=Australia/Sydney:20261114T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-16-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261116T154500
+DTEND;TZID=Australia/Sydney:20261116T170000
+SUMMARY:Train: Session A: technical touch
+DESCRIPTION:75 min. Touch\, passing accuracy\, receive and turn\, shooting
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session A: technical touch starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-17-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261117T060000
+DTEND;TZID=Australia/Sydney:20261117T070000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-17-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261117T200000
+DTEND;TZID=Australia/Sydney:20261117T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Futsal training.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-18-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261118T154500
+DTEND;TZID=Australia/Sydney:20261118T170000
+SUMMARY:Train: Session B: passing and scanning
+DESCRIPTION:75 min\, easy intensity. Pass and move\, shoulder checks\, lon
+ g switches.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session B: passing and scanning starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-19-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261119T154500
+DTEND;TZID=Australia/Sydney:20261119T170000
+SUMMARY:Train: Session C: game speed
+DESCRIPTION:75 min\, moderate. Includes 15 min of ball-carry intervals.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: game speed starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-20-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261120T160000
+DTEND;TZID=Australia/Sydney:20261120T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-21-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261121T060000
+DTEND;TZID=Australia/Sydney:20261121T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-23-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261123T154500
+DTEND;TZID=Australia/Sydney:20261123T170000
+SUMMARY:Train: Session A: technical touch
+DESCRIPTION:75 min. Touch\, passing accuracy\, receive and turn\, shooting
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session A: technical touch starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-24-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261124T060000
+DTEND;TZID=Australia/Sydney:20261124T070000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-24-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261124T200000
+DTEND;TZID=Australia/Sydney:20261124T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Futsal training.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-25-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261125T154500
+DTEND;TZID=Australia/Sydney:20261125T170000
+SUMMARY:Train: Session B: passing and scanning
+DESCRIPTION:75 min\, easy intensity. Pass and move\, shoulder checks\, lon
+ g switches.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session B: passing and scanning starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-26-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261126T154500
+DTEND;TZID=Australia/Sydney:20261126T170000
+SUMMARY:Train: Session C: game speed
+DESCRIPTION:75 min\, moderate. Includes 15 min of ball-carry intervals.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: game speed starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-27-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261127T160000
+DTEND;TZID=Australia/Sydney:20261127T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-28-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261128T060000
+DTEND;TZID=Australia/Sydney:20261128T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-11-30-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261130T154500
+DTEND;TZID=Australia/Sydney:20261130T170000
+SUMMARY:Train: Session A: technical touch
+DESCRIPTION:75 min. Touch\, passing accuracy\, receive and turn\, shooting
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session A: technical touch starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261201T060000
+DTEND;TZID=Australia/Sydney:20261201T070000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-01-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261201T200000
+DTEND;TZID=Australia/Sydney:20261201T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Futsal training.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-02-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261202T154500
+DTEND;TZID=Australia/Sydney:20261202T170000
+SUMMARY:Train: Session B: passing and scanning
+DESCRIPTION:75 min\, easy intensity. Pass and move\, shoulder checks\, lon
+ g switches.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session B: passing and scanning starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-03-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261203T154500
+DTEND;TZID=Australia/Sydney:20261203T170000
+SUMMARY:Train: Session C: match intensity
+DESCRIPTION:75 min. Small-sided play on a full pitch.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: match intensity starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-04-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261204T160000
+DTEND;TZID=Australia/Sydney:20261204T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-05-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261205T060000
+DTEND;TZID=Australia/Sydney:20261205T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-07-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261207T154500
+DTEND;TZID=Australia/Sydney:20261207T170000
+SUMMARY:Train: Session A: technical touch
+DESCRIPTION:75 min. Touch\, passing accuracy\, receive and turn\, shooting
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session A: technical touch starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-08-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261208T060000
+DTEND;TZID=Australia/Sydney:20261208T070000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-08-1@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261208T200000
+DTEND;TZID=Australia/Sydney:20261208T210000
+SUMMARY:Train: Futsal training
+DESCRIPTION:Futsal training.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Futsal training starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-09-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261209T154500
+DTEND;TZID=Australia/Sydney:20261209T170000
+SUMMARY:Train: Session B: passing and scanning
+DESCRIPTION:75 min\, easy intensity. Pass and move\, shoulder checks\, lon
+ g switches. If a trial is coming\, cut this by a third in the last 3 days
+ .
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session B: passing and scanning starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-10-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261210T154500
+DTEND;TZID=Australia/Sydney:20261210T170000
+SUMMARY:Train: Session C: match intensity
+DESCRIPTION:75 min. Small-sided play on a full pitch. If a trial is coming
+ \, cut this by a third in the last 3 days.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Session C: match intensity starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-11-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261211T160000
+DTEND;TZID=Australia/Sydney:20261211T173000
+SUMMARY:Train: S&C
+DESCRIPTION:Strength and conditioning with his S&C coach.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: S&C starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+BEGIN:VEVENT
+UID:2026-12-12-0@midfield-plan
+DTSTAMP:20261007T120000Z
+DTSTART;TZID=Australia/Sydney:20261212T060000
+DTEND;TZID=Australia/Sydney:20261212T070000
+SUMMARY:Train: Saturday fitness
+DESCRIPTION:Sprints or a 5 km run\, depending on the week. Check this week
+ 's plan.
+BEGIN:VALARM
+ACTION:DISPLAY
+DESCRIPTION:Train: Saturday fitness starts soon
+TRIGGER:-PT60M
+END:VALARM
+END:VEVENT
+END:VCALENDAR
