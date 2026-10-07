@@ -50,12 +50,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-08-2@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261008T154500
 DTEND;TZID=Australia/Sydney:20261008T164500
 SUMMARY:Train: Session C: game speed
-DESCRIPTION:60 min\, moderate. 1v1\, carries\, driven passes\, set pieces.
-  Finish by 5pm.
+DESCRIPTION:60 min\, moderate. Solo take-ons against cones\, carries\, driv
+ en passes\, set pieces. Finish by 5pm.
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Train: Session C: game speed starts soon
@@ -191,14 +192,16 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-13-2@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261013T130000
 DTEND;TZID=Australia/Sydney:20261013T143000
-SUMMARY:Study: Light review
-DESCRIPTION:Go over today's paper\, then rest.
+SUMMARY:Study: English Paper 2 prep
+DESCRIPTION:Modules\, kept light. Paper 2 is at 9:25am tomorrow. Finish by 
+ 2:30pm\, then rest.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Light review starts soon
+DESCRIPTION:Study: English Paper 2 prep starts soon
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -238,14 +241,16 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-14-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261014T130000
 DTEND;TZID=Australia/Sydney:20261014T143000
-SUMMARY:Study: Light review
-DESCRIPTION:Go over today's paper\, then rest.
+SUMMARY:Study: Maths Standard 2 prep
+DESCRIPTION:Maths is on Monday 19 October at 9:20am. One light block of for
+ mulas and a few past-paper questions\, then rest.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Light review starts soon
+DESCRIPTION:Study: Maths Standard 2 prep starts soon
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -277,12 +282,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-15-2@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261015T154500
 DTEND;TZID=Australia/Sydney:20261015T164500
 SUMMARY:Train: Session C: game speed
-DESCRIPTION:60 min\, moderate. 1v1\, carries\, driven passes\, set pieces.
-  Finish by 5pm.
+DESCRIPTION:60 min\, moderate. Solo take-ons against cones\, carries\, driv
+ en passes\, set pieces. Finish by 5pm.
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Train: Session C: game speed starts soon
@@ -344,12 +350,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-19-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261019T092000
 DTEND;TZID=Australia/Sydney:20261019T112000
 SUMMARY:Exam: Mathematics Standard 2
-DESCRIPTION:De La Salle College\, Revesby Heights. Check the finish time o
- n NSW Students Online.
+DESCRIPTION:De La Salle College\, Revesby Heights. Check the finish time on
+  NSW Students Online. Use a 2B pencil for any graphs or diagrams.
 LOCATION:De La Salle College\, Revesby Heights
 BEGIN:VALARM
 ACTION:DISPLAY
@@ -364,14 +371,16 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-19-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261019T130000
 DTEND;TZID=Australia/Sydney:20261019T143000
-SUMMARY:Study: Light review
-DESCRIPTION:Go over today's paper\, then rest.
+SUMMARY:Study: Construction prep
+DESCRIPTION:Construction is on Monday 26 October at 1:55pm. One light block
+  of notes and past questions\, then rest.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Light review starts soon
+DESCRIPTION:Study: Construction prep starts soon
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -508,12 +517,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-22-2@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261022T154500
 DTEND;TZID=Australia/Sydney:20261022T164500
 SUMMARY:Train: Session C: game speed
-DESCRIPTION:60 min\, moderate. 1v1\, carries\, driven passes\, set pieces.
-  Finish by 5pm.
+DESCRIPTION:60 min\, moderate. Solo take-ons against cones\, carries\, driv
+ en passes\, set pieces. Finish by 5pm.
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Train: Session C: game speed starts soon
@@ -694,14 +704,16 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-28-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261028T130000
 DTEND;TZID=Australia/Sydney:20261028T143000
-SUMMARY:Study: Light review
-DESCRIPTION:Go over today's paper\, then rest.
+SUMMARY:Study: Industrial Technology prep
+DESCRIPTION:Industrial Technology (Multimedia) is on Wednesday 4 November a
+ t 1:55pm. One block of notes and past questions\, then rest.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Light review starts soon
+DESCRIPTION:Study: Industrial Technology prep starts soon
 TRIGGER:-PT15M
 END:VALARM
 END:VEVENT
@@ -733,12 +745,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-29-2@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261029T154500
 DTEND;TZID=Australia/Sydney:20261029T164500
 SUMMARY:Train: Session C: game speed
-DESCRIPTION:60 min\, moderate. 1v1\, carries\, driven passes\, set pieces.
-  Finish by 5pm.
+DESCRIPTION:60 min\, moderate. Solo take-ons against cones\, carries\, driv
+ en passes\, set pieces. Finish by 5pm.
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Train: Session C: game speed starts soon
@@ -1302,11 +1315,13 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-03-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261203T154500
 DTEND;TZID=Australia/Sydney:20261203T170000
 SUMMARY:Train: Session C: match intensity
-DESCRIPTION:75 min. Small-sided play on a full pitch.
+DESCRIPTION:75 min. Solo at match intensity: take-ons against cones\, long 
+ carries\, driven passes and finishing.
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Train: Session C: match intensity starts soon
@@ -1397,12 +1412,14 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-12-10-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T130000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261210T154500
 DTEND;TZID=Australia/Sydney:20261210T170000
 SUMMARY:Train: Session C: match intensity
-DESCRIPTION:75 min. Small-sided play on a full pitch. If a trial is coming
- \, cut this by a third in the last 3 days.
+DESCRIPTION:75 min. Solo at match intensity: take-ons against cones\, long 
+ carries\, driven passes and finishing. If a trial is coming\, cut this by 
+ a third in the last 3 days.
 BEGIN:VALARM
 ACTION:DISPLAY
 DESCRIPTION:Train: Session C: match intensity starts soon
