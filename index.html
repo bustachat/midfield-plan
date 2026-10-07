@@ -392,16 +392,16 @@ const DRILLS = {
       + poly(T,leg,"fig") + dot(T,bl,5,"ball") + note(20,28,"Weaker foot only for the last 2 min","start"));
   },
   wall(){
-    const T = 9, W = 285, xs = [250,170,90], ball = [], pl = [];
+    const T = 6, W = 285, xs = [248,188], ball = [], pl = [];
     xs.forEach((px,i) => {
-      const t0 = i*3, nx = xs[(i+1)%3];
+      const t0 = i*3, nx = xs[(i+1)%xs.length];
       ball.push([t0, px+9, 90]);
       for(let k = 0; k < 2; k++){ ball.push([t0+k+.5, W-3, 90], [t0+k+1, px+9, 90]); }
       ball.push([t0+2.4, px+9, 90], [t0+3, nx+9, 90]);
       pl.push([t0, px, 90], [t0+2.4, px, 90], [t0+3, nx, 90]);
     });
-    return svg("Top view: passing against a wall from 25 m, 15 m and then 5 m away, using both feet.",
-      FIELD + bar(288,40,8,100) + xs.map((x,i) => cone(x,112) + note(x,132,["5 m","15 m","25 m"][i])).join("")
+    return svg("Top view: passing against a wall from 2 m away, then from 5 m away, using both feet.",
+      FIELD + bar(288,40,8,100) + xs.map((x,i) => cone(x,112) + note(x,132,["2 m","5 m"][i])).join("")
       + dot(T,pl,7,"pl") + dot(T,ball,4,"ball") + note(160,168,"Wall or rebounder, both feet"));
   },
   turn(){
@@ -518,7 +518,7 @@ document.addEventListener("click", ev => {
 function viewSessions(){
   const S_ = [
     ["Session A: technical touch","Mondays, 60 min (75 min from 5 Nov)",
-     [["10 min dynamic warm-up with a ball","weave"],["8 min juggling, weaker foot only for the last 2","juggle"],["15 min wall or rebounder passing at 5, 15 and 25 m, both feet","wall"],["15 min receive-and-turn through cones","turn"],["10 min shooting from the edge of the box: 5 each foot, then 5 first-time","shoot"],["2 min easy cool-down","stretch"]]],
+     [["10 min dynamic warm-up with a ball","weave"],["8 min juggling, weaker foot only for the last 2","juggle"],["15 min wall or rebounder passing at 2 m and 5 m, both feet","wall"],["15 min receive-and-turn through cones","turn"],["10 min shooting from the edge of the box: 5 each foot, then 5 first-time","shoot"],["2 min easy cool-down","stretch"]]],
     ["Session B: passing and scanning","Wednesdays, 40 min, easy (75 min from 5 Nov)",
      [["8 min warm-up","weave"],["12 min pass and move against a wall or rebounder, shoulder check before every first touch","scan"],["10 min switches of 25 to 40 m to a target, alternating feet","switch"],["10 min stretching and mobility","stretch"]]],
     ["Session C: game speed","Thursdays, 60 min, moderate (75 min from 5 Nov)",
