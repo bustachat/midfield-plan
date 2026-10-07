@@ -425,33 +425,41 @@ const DRILLS = {
       + note(160,168,"Pass, receive, turn, then dribble through the gate"));
   },
   shoot(){
-    // Three set-ups (right, centre, left), each with three red cones on a diagonal and a black defender cone.
-    const T = 18, c3 = [250,134], dir = [-.7071,-.7071], nrm = [.7071,-.7071];
-    const weave = s => { const off = 13*Math.cos(Math.PI*s/20)*Math.min(1,(s+16)/8)*(s > 40 ? 1-.5*ph(s,40,48) : 1); return [c3[0]+s*dir[0]+off*nrm[0], c3[1]+s*dir[1]+off*nrm[1]]; };
-    const ahead = s => { const a = weave(s-.5), b = weave(s+.5), d = Math.hypot(b[0]-a[0], b[1]-a[1]) || 1; return [(b[0]-a[0])/d*9, (b[1]-a[1])/d*9]; };
-    const W = weave(48), L0 = ahead(48), tip = [225,92], mid = [207,107], hit = [190,101], set = [189,99], spot = [183,92];
+    // Three set-ups (right, centre, left), each with three red cones and a black defender cone.
+    // The sides use a diagonal line of cones; the centre uses a straight line directly below the defender.
+    const T = 18;
     const add = (p,q) => [p[0]+q[0], p[1]+q[1]], mix = (p,q,u) => [lerp(p[0],q[0],u), lerp(p[1],q[1],u)];
-    // dx slides the base set-up sideways, mir flips it left to right, post is the target at the goal
-    const spots = [{dx:14, mir:false, post:[137,16]}, {dx:-41, mir:false, post:[183,16]}, {dx:14, mir:true, post:[183,16]}];
+    const mkGeo = (base, dir, nrm, lam, s0, s1, rl, tap, pts) => {
+      const weave = s => { const off = 13*Math.cos(Math.PI*s/lam)*Math.min(1,(s-s0)/rl)*(tap && s > tap ? 1-.5*ph(s,tap,s1) : 1); return [base[0]+s*dir[0]+off*nrm[0], base[1]+s*dir[1]+off*nrm[1]]; };
+      const ahead = s => { const a = weave(s-.5), b = weave(s+.5), d = Math.hypot(b[0]-a[0], b[1]-a[1]) || 1; return [(b[0]-a[0])/d*9, (b[1]-a[1])/d*9]; };
+      return {weave, ahead, s0, s1, W: weave(s1), L0: ahead(s1), ...pts};
+    };
+    const gSide = mkGeo([250,134], [-.7071,-.7071], [.7071,-.7071], 20, -16, 48, 8, 40,
+      {tip:[225,92], mid:[207,107], hit:[190,101], set:[189,99], spot:[183,92], reds:[[250,134],[235,119],[222,106]], black:[201,91]});
+    const gCentre = mkGeo([160,142], [0,-1], [1,0], 17, -10, 34, 6, 0,
+      {tip:[181,98], mid:[175,103], hit:[187,97], set:[186,95], spot:[182,89], reds:[[160,142],[160,125],[160,108]], black:[160,91]});
+    // dx slides a set-up sideways, mir flips it left to right, post is the target at the goal
+    const spots = [{g:gSide, dx:14, mir:false, post:[137,16]}, {g:gCentre, dx:0, mir:false, post:[183,16]}, {g:gSide, dx:14, mir:true, post:[183,16]}];
     const place = (sp,p) => [sp.mir ? 320-(p[0]+sp.dx) : p[0]+sp.dx, p[1]];
     const local = (t, sp) => {
+      const g = sp.g;
       let p, b, o = 1, ob = 1;
-      if(t < 3.4){ const s = lerp(-16,48,ph(t,0,3.4)); p = weave(s); b = add(p, ahead(s)); }
-      else if(t < 3.7){ p = mix(W,tip,ph(t,3.4,3.7)); b = add(p, L0); }
-      else if(t < 4.2){ p = t < 3.95 ? mix(tip,mid,ph(t,3.7,3.95)) : mix(mid,hit,ph(t,3.95,4.2)); b = add(p, mix(L0,[-7,-1],ph(t,3.7,4.2))); }
-      else if(t < 4.5){ const u = ph(t,4.2,4.5); p = mix(hit,set,u); b = mix(add(hit,[-7,-1]),spot,u); }
-      else { p = set; b = spot; ob = 1-ph(t,5.15,5.35); o = 1-ph(t,5.35,5.65); }
+      if(t < 3.4){ const s = lerp(g.s0,g.s1,ph(t,0,3.4)); p = g.weave(s); b = add(p, g.ahead(s)); }
+      else if(t < 3.7){ p = mix(g.W,g.tip,ph(t,3.4,3.7)); b = add(p, g.L0); }
+      else if(t < 4.2){ p = t < 3.95 ? mix(g.tip,g.mid,ph(t,3.7,3.95)) : mix(g.mid,g.hit,ph(t,3.95,4.2)); b = add(p, mix(g.L0,[-7,-1],ph(t,3.7,4.2))); }
+      else if(t < 4.5){ const u = ph(t,4.2,4.5); p = mix(g.hit,g.set,u); b = mix(add(g.hit,[-7,-1]),g.spot,u); }
+      else { p = g.set; b = g.spot; ob = 1-ph(t,5.15,5.35); o = 1-ph(t,5.35,5.65); }
       const P = place(sp,p), f = ph(t,0,.3);
-      const B = t < 4.65 ? place(sp,b) : mix(place(sp,spot), sp.post, ph(t,4.65,5.15));
+      const B = t < 4.65 ? place(sp,b) : mix(place(sp,g.spot), sp.post, ph(t,4.65,5.15));
       return [P, B, o*f, ob*f];
     };
     const both = t => { const r = Math.min(2, Math.floor(t/6)); return local(t - 6*r, spots[r]); };
     const pl = sample(T, 360, t => { const [p,,o] = both(t); return [p[0],p[1],o]; });
     const bl = sample(T, 360, t => { const [,b,,ob] = both(t); return [b[0],b[1],ob]; });
-    const reds = [[250,134],[235,119],[222,106]], dcone = (x,y) => `<circle cx="${x}" cy="${y}" r="5.5" fill="#111" stroke="#fff" stroke-width="1.2"/>`;
-    const setups = spots.map(sp => reds.map(r => cone(...place(sp,r))).join("") + dcone(...place(sp,[201,91]))).join("");
+    const dcone = (x,y) => `<circle cx="${x}" cy="${y}" r="5.5" fill="#111" stroke="#fff" stroke-width="1.2"/>`;
+    const setups = spots.map(sp => sp.g.reds.map(r => cone(...place(sp,r))).join("") + dcone(...place(sp,sp.g.black))).join("");
     const win = (a,b) => [0,1,2].map(i => [a+6*i, b+6*i]);
-    return svg("Top view: three set-ups of three cones on a diagonal with a black defender cone, on the right, in the centre and on the left. Weave the cones, beat the defender with a skill, take one touch, then shoot at a post, not down the middle.",
+    return svg("Top view: three set-ups of three red cones and a black defender cone, on the right and left in a diagonal and in the centre in a straight line. Weave the cones, beat the defender with a skill, take one touch, then shoot at a post, not down the middle.",
       FIELD + `<path class="ln" d="M70 12V90H250V12"/><rect x="132" y="11" width="56" height="9" fill="none" stroke="#fff" stroke-width="2"/>`
       + `<circle class="ring" cx="137" cy="15.5" r="6"/><circle class="ring" cx="183" cy="15.5" r="6"/>`
       + setups + note(8,24,"4 runs each","start") + note(8,36,"12 in total","start")
@@ -539,7 +547,7 @@ document.addEventListener("click", ev => {
 function viewSessions(){
   const S_ = [
     ["Session A: technical touch","Mondays, 60 min (75 min from 5 Nov)",
-     [["10 min dynamic warm-up with a ball","weave"],["8 min juggling, weaker foot only for the last 2","juggle"],["15 min wall or rebounder passing at 2 m and 5 m, both feet","wall"],["15 min receive-and-turn through cones","turn"],["10 min shooting: weave through three cones set on a diagonal, beat the black defender cone with a skill, take one touch, then shoot at either post, not down the middle. Set up on the left, centre and right and do 4 runs at each, 12 in total","shoot"],["2 min easy cool-down","stretch"]]],
+     [["10 min dynamic warm-up with a ball","weave"],["8 min juggling, weaker foot only for the last 2","juggle"],["15 min wall or rebounder passing at 2 m and 5 m, both feet","wall"],["15 min receive-and-turn through cones","turn"],["10 min shooting: weave through three red cones, beat the black defender cone with a skill, take one touch, then shoot at either post, not down the middle. Set up on the left and right with the cones on a diagonal, and in the centre with the cones in a straight line. Do 4 runs at each, 12 in total","shoot"],["2 min easy cool-down","stretch"]]],
     ["Session B: passing and scanning","Wednesdays, 40 min, easy (75 min from 5 Nov)",
      [["8 min warm-up","weave"],["12 min pass and move against a wall or rebounder, shoulder check before every first touch","scan"],["10 min switches of 25 to 40 m to a target, alternating feet","switch"],["10 min stretching and mobility","stretch"]]],
     ["Session C: game speed","Thursdays, 60 min, moderate (75 min from 5 Nov)",
