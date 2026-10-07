@@ -425,33 +425,39 @@ const DRILLS = {
       + note(160,168,"Pass, receive, turn, then dribble through the gate"));
   },
   shoot(){
-    // Right side first, then the mirror image on the left. Cones sit on a diagonal; the black one is the defender.
-    const T = 12, c3 = [250,134], dir = [-.7071,-.7071], nrm = [.7071,-.7071];
+    // Three set-ups (right, centre, left), each with three red cones on a diagonal and a black defender cone.
+    const T = 18, c3 = [250,134], dir = [-.7071,-.7071], nrm = [.7071,-.7071];
     const weave = s => { const off = 13*Math.cos(Math.PI*s/20)*Math.min(1,(s+16)/8)*(s > 40 ? 1-.5*ph(s,40,48) : 1); return [c3[0]+s*dir[0]+off*nrm[0], c3[1]+s*dir[1]+off*nrm[1]]; };
     const ahead = s => { const a = weave(s-.5), b = weave(s+.5), d = Math.hypot(b[0]-a[0], b[1]-a[1]) || 1; return [(b[0]-a[0])/d*9, (b[1]-a[1])/d*9]; };
-    const W = weave(48), L0 = ahead(48), tip = [225,92], mid = [207,107], hit = [190,101], set = [189,99], spot = [183,92], post = [136,16];
+    const W = weave(48), L0 = ahead(48), tip = [225,92], mid = [207,107], hit = [190,101], set = [189,99], spot = [183,92];
     const add = (p,q) => [p[0]+q[0], p[1]+q[1]], mix = (p,q,u) => [lerp(p[0],q[0],u), lerp(p[1],q[1],u)];
-    const local = t => {
+    // dx slides the base set-up sideways, mir flips it left to right, post is the target at the goal
+    const spots = [{dx:14, mir:false, post:[137,16]}, {dx:-41, mir:false, post:[183,16]}, {dx:14, mir:true, post:[183,16]}];
+    const place = (sp,p) => [sp.mir ? 320-(p[0]+sp.dx) : p[0]+sp.dx, p[1]];
+    const local = (t, sp) => {
       let p, b, o = 1, ob = 1;
       if(t < 3.4){ const s = lerp(-16,48,ph(t,0,3.4)); p = weave(s); b = add(p, ahead(s)); }
       else if(t < 3.7){ p = mix(W,tip,ph(t,3.4,3.7)); b = add(p, L0); }
       else if(t < 4.2){ p = t < 3.95 ? mix(tip,mid,ph(t,3.7,3.95)) : mix(mid,hit,ph(t,3.95,4.2)); b = add(p, mix(L0,[-7,-1],ph(t,3.7,4.2))); }
       else if(t < 4.5){ const u = ph(t,4.2,4.5); p = mix(hit,set,u); b = mix(add(hit,[-7,-1]),spot,u); }
-      else { p = set; b = t < 4.65 ? spot : mix(spot,post,ph(t,4.65,5.15)); ob = 1-ph(t,5.15,5.35); o = 1-ph(t,5.35,5.65); }
-      const f = ph(t,0,.3);
-      return [p, b, o*f, ob*f];
+      else { p = set; b = spot; ob = 1-ph(t,5.15,5.35); o = 1-ph(t,5.35,5.65); }
+      const P = place(sp,p), f = ph(t,0,.3);
+      const B = t < 4.65 ? place(sp,b) : mix(place(sp,spot), sp.post, ph(t,4.65,5.15));
+      return [P, B, o*f, ob*f];
     };
-    const both = t => { const m = t >= 6, [p,b,o,ob] = local(m ? t-6 : t); return m ? [[320-p[0],p[1]], [320-b[0],b[1]], o, ob] : [p,b,o,ob]; };
-    const pl = sample(T, 240, t => { const [p,,o] = both(t); return [p[0],p[1],o]; });
-    const bl = sample(T, 240, t => { const [,b,,ob] = both(t); return [b[0],b[1],ob]; });
+    const both = t => { const r = Math.min(2, Math.floor(t/6)); return local(t - 6*r, spots[r]); };
+    const pl = sample(T, 360, t => { const [p,,o] = both(t); return [p[0],p[1],o]; });
+    const bl = sample(T, 360, t => { const [,b,,ob] = both(t); return [b[0],b[1],ob]; });
     const reds = [[250,134],[235,119],[222,106]], dcone = (x,y) => `<circle cx="${x}" cy="${y}" r="5.5" fill="#111" stroke="#fff" stroke-width="1.2"/>`;
-    return svg("Top view: weave through three cones on a diagonal, beat the defender cone with a skill, take one touch, then shoot at a post, not down the middle. Repeated on the left and right sides.",
+    const setups = spots.map(sp => reds.map(r => cone(...place(sp,r))).join("") + dcone(...place(sp,[201,91]))).join("");
+    const win = (a,b) => [0,1,2].map(i => [a+6*i, b+6*i]);
+    return svg("Top view: three set-ups of three cones on a diagonal with a black defender cone, on the right, in the centre and on the left. Weave the cones, beat the defender with a skill, take one touch, then shoot at a post, not down the middle.",
       FIELD + `<path class="ln" d="M70 12V90H250V12"/><rect x="132" y="11" width="56" height="9" fill="none" stroke="#fff" stroke-width="2"/>`
       + `<circle class="ring" cx="137" cy="15.5" r="6"/><circle class="ring" cx="183" cy="15.5" r="6"/>`
-      + reds.map(([x,y]) => cone(x,y) + cone(320-x,y)).join("") + dcone(201,91) + dcone(119,91) + note(201,82,"Defender") + note(119,82,"Defender")
+      + setups + note(8,24,"4 runs each","start") + note(8,36,"12 in total","start")
       + dot(T,pl,7,"pl") + dot(T,bl,4,"ball")
-      + tag(T,160,168,"Weave, then beat the defender with a skill",[[.2,4.2],[6.2,10.2]])
-      + tag(T,160,168,"One touch, then shoot at a post, not the middle",[[4.3,5.7],[10.3,11.7]]));
+      + tag(T,160,168,"Weave, then beat the black cone with a skill",win(.2,4.2))
+      + tag(T,160,168,"One touch, then shoot at a post, not the middle",win(4.3,5.7)));
   },
   stretch(){
     const T = 6, K = [154,128], S = [152,62];
@@ -533,7 +539,7 @@ document.addEventListener("click", ev => {
 function viewSessions(){
   const S_ = [
     ["Session A: technical touch","Mondays, 60 min (75 min from 5 Nov)",
-     [["10 min dynamic warm-up with a ball","weave"],["8 min juggling, weaker foot only for the last 2","juggle"],["15 min wall or rebounder passing at 2 m and 5 m, both feet","wall"],["15 min receive-and-turn through cones","turn"],["10 min shooting: weave through three cones set on a diagonal, beat the defender cone with a skill, take one touch, then shoot at either post, not down the middle. Set up on the left and right and swap sides","shoot"],["2 min easy cool-down","stretch"]]],
+     [["10 min dynamic warm-up with a ball","weave"],["8 min juggling, weaker foot only for the last 2","juggle"],["15 min wall or rebounder passing at 2 m and 5 m, both feet","wall"],["15 min receive-and-turn through cones","turn"],["10 min shooting: weave through three cones set on a diagonal, beat the black defender cone with a skill, take one touch, then shoot at either post, not down the middle. Set up on the left, centre and right and do 4 runs at each, 12 in total","shoot"],["2 min easy cool-down","stretch"]]],
     ["Session B: passing and scanning","Wednesdays, 40 min, easy (75 min from 5 Nov)",
      [["8 min warm-up","weave"],["12 min pass and move against a wall or rebounder, shoulder check before every first touch","scan"],["10 min switches of 25 to 40 m to a target, alternating feet","switch"],["10 min stretching and mobility","stretch"]]],
     ["Session C: game speed","Thursdays, 60 min, moderate (75 min from 5 Nov)",
