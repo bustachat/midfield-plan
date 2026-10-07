@@ -24,27 +24,29 @@ END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:2026-10-08-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261008T083000
 DTEND;TZID=Australia/Sydney:20261008T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-08-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261008T124500
 DTEND;TZID=Australia/Sydney:20261008T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -65,27 +67,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-09-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261009T083000
 DTEND;TZID=Australia/Sydney:20261009T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-09-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261009T124500
 DTEND;TZID=Australia/Sydney:20261009T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -118,27 +122,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-12-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261012T083000
 DTEND;TZID=Australia/Sydney:20261012T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-12-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261012T124500
 DTEND;TZID=Australia/Sydney:20261012T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -256,27 +262,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-15-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261015T083000
 DTEND;TZID=Australia/Sydney:20261015T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-15-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261015T124500
 DTEND;TZID=Australia/Sydney:20261015T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -297,27 +305,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-16-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261016T083000
 DTEND;TZID=Australia/Sydney:20261016T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-16-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261016T124500
 DTEND;TZID=Australia/Sydney:20261016T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -412,27 +422,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-20-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261020T093000
 DTEND;TZID=Australia/Sydney:20261020T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-20-2@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261020T124500
 DTEND;TZID=Australia/Sydney:20261020T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -451,27 +463,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-21-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261021T083000
 DTEND;TZID=Australia/Sydney:20261021T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-21-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261021T124500
 DTEND;TZID=Australia/Sydney:20261021T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -491,27 +505,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-22-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261022T083000
 DTEND;TZID=Australia/Sydney:20261022T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-22-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261022T124500
 DTEND;TZID=Australia/Sydney:20261022T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -532,27 +548,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-23-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261023T083000
 DTEND;TZID=Australia/Sydney:20261023T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-23-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261023T124500
 DTEND;TZID=Australia/Sydney:20261023T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -598,14 +616,15 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-26-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261026T083000
 DTEND;TZID=Australia/Sydney:20261026T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -644,27 +663,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-27-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261027T093000
 DTEND;TZID=Australia/Sydney:20261027T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-27-2@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261027T124500
 DTEND;TZID=Australia/Sydney:20261027T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -719,27 +740,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-29-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261029T083000
 DTEND;TZID=Australia/Sydney:20261029T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-29-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261029T124500
 DTEND;TZID=Australia/Sydney:20261029T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -760,27 +783,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-30-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261030T083000
 DTEND;TZID=Australia/Sydney:20261030T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-10-30-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261030T124500
 DTEND;TZID=Australia/Sydney:20261030T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -813,27 +838,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-02-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261102T083000
 DTEND;TZID=Australia/Sydney:20261102T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-02-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261102T124500
 DTEND;TZID=Australia/Sydney:20261102T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -866,27 +893,29 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-03-1@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261103T093000
 DTEND;TZID=Australia/Sydney:20261103T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-03-2@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261103T124500
 DTEND;TZID=Australia/Sydney:20261103T153000
-SUMMARY:Study: Study: afternoon
+SUMMARY:Study: afternoon
 DESCRIPTION:One more block\, then past papers or flashcards.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: afternoon starts soon
+DESCRIPTION:Study: afternoon starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
@@ -906,14 +935,15 @@ END:VALARM
 END:VEVENT
 BEGIN:VEVENT
 UID:2026-11-04-0@midfield-plan
-DTSTAMP:20261007T120000Z
+DTSTAMP:20261007T140000Z
+SEQUENCE:1
 DTSTART;TZID=Australia/Sydney:20261104T083000
 DTEND;TZID=Australia/Sydney:20261104T114500
-SUMMARY:Study: Study: morning blocks
+SUMMARY:Study: morning blocks
 DESCRIPTION:Two 90-minute blocks with a 15-minute break.
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Study: Study: morning blocks starts soon
+DESCRIPTION:Study: morning blocks starts soon
 TRIGGER:-PT60M
 END:VALARM
 END:VEVENT
